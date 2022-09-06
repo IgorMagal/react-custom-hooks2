@@ -2,15 +2,18 @@ import { useRef } from 'react';
 
 import classes from './TaskForm.module.css';
 
-const TaskForm = (props) => {
+const TaskForm = (props) =>
+{
   const taskInputRef = useRef();
 
-  const submitHandler = (event) => {
+  const submitHandler = (event) =>
+  {
     event.preventDefault();
 
     const enteredValue = taskInputRef.current.value;
 
-    if (enteredValue.trim().length > 0) {
+    if (enteredValue.trim().length > 0)
+    {
       props.onEnterTask(enteredValue);
     }
   };
